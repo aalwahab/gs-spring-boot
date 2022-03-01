@@ -46,22 +46,7 @@ under the License.
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <pluginGroups>
-        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
-    </pluginGroups>
-    <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <sonar.host.url>
-                  http://a21da2c1409fd4f33af9c8296d8b6170-1922071520.us-east-2.elb.amazonaws.com:9000/
-                </sonar.host.url>
-            </properties>
-        </profile>
-     </profiles>
+    
   <servers>
     <server>
         <id>maven-releases</id>
