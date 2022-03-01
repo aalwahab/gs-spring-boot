@@ -21,14 +21,14 @@ spec:
     stage('Run Maven') {
       steps {
         container('maven') {
-          sh 'mvn deploy -f ./complete/pom.xml'
+          sh 'mvn deploy --settings ./complete/settings.xml -f ./complete/pom.xml'
         }
       }
     }
     stage ('Run Sonarqube'){
       steps{
         container('maven'){
-          sh 'mvn sonar:sonar -f ./complete/pom.xml'
+          sh 'mvn sonar:sonar --settings ./complete/settings.xml -f ./complete/pom.xml'
         }}}
   }
 }
