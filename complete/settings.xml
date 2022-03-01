@@ -63,6 +63,11 @@ under the License.
         </profile>
      </profiles>  
   <servers>
+      <server>
+        <id>sonar</id>
+        <username>admin</username>
+        <password>User12002!</password>
+    </server>
     <server>
         <id>maven-releases</id>
         <username>admin</username>
