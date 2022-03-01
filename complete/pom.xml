@@ -55,10 +55,10 @@
 		</plugins>
 	</build>
 <distributionManagement>
-		<snapshotRepository>
-			<id>maven-snapshots</id>
-			<url>http://a6cddae7059d348eeaa416985cb9d64b-574852014.us-east-2.elb.amazonaws.com:8081/repository/maven-snapshots/</url>
-		</snapshotRepository>
-	    
+		
+	    <repository>
+		    <id>maven-releases</id>
+	      <url>http://a6cddae7059d348eeaa416985cb9d64b-574852014.us-east-2.elb.amazonaws.com:8081/repository/maven-releases/</url>
+	    </repository>
 	  </distributionManagement>
 </project>
