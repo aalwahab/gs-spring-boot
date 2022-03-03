@@ -11,7 +11,7 @@ kind: Pod
 spec:
   containers:
   - name: maven
-    image: danielrmartin/sko:1.2
+    image: maven:3.3.9-jdk-11-alpine
     command: ['cat']
     tty: true
 """
