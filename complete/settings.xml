@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -18,7 +17,6 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-
 <!--
  | This is the configuration file for Maven. It can be specified at two levels:
  |
@@ -43,21 +41,58 @@ under the License.
  | values (values used when the setting is not specified) are provided.
  |
  |-->
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<settings
+	xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  
-  <servers>
-      
-    <server>
-        <id>maven-releases</id>
-        <username>admin</username>
-        <password>User12002!</password>
-    </server>
-    <server>
-        <id>maven-snapshots</id>
-        <username>admin</username>
-        <password>User12002!</password>
-    </server>
-</servers>
+	<profiles>
+		<profile>
+			<id>jdk-1.4</id>
+			<activation>
+				<jdk>1.4</jdk>
+			</activation>
+			<repositories>
+				<repository>
+					<id>jdk14</id>
+					<name>Repository for JDK 1.4 builds</name>
+					<url>http://www.myhost.com/maven/jdk14</url>
+					<layout>default</layout>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url> http://sonar.core-devops.com </sonar.host.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>env-dev</id>
+			<activation>
+				<property>
+					<name>target-env</name>
+					<value>dev</value>
+				</property>
+			</activation>
+			<properties>
+				<tomcatPath>/path/to/tomcat/instance</tomcatPath>
+			</properties>
+		</profile>
+	</profiles>
+	<servers>
+		<server>
+			<id>maven-releases</id>
+			<username>admin</username>
+			<password>User12002!</password>
+		</server>
+		<server>
+			<id>maven-snapshots</id>
+			<username>admin</username>
+			<password>User12002!</password>
+		</server>
+	</servers>
 </settings>
