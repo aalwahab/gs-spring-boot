@@ -68,6 +68,7 @@ under the License.
 			<properties>
 				<!-- Optional URL to server. Default value is http://localhost:9000 -->
 				<sonar.host.url> http://a21da2c1409fd4f33af9c8296d8b6170-1922071520.us-east-2.elb.amazonaws.com:9000/ </sonar.host.url>
+				<sonar.login>1ac62eb7f608ade414d2802c21a7b3a026cc9654</sonar.login>
 			</properties>
 		</profile>
 		<profile>
