@@ -21,7 +21,7 @@ spec:
     stage('Run Maven') {
       steps {
         container('maven') {
-          sh 'mvn deploy --settings ./complete/settings.xml -f ./complete/pom.xml'
+          sh 'mvn deploy -f ./complete/pom.xml'
         }
       }
     }
