@@ -25,14 +25,6 @@ spec:
         }
       }
     }
-    stage ('Run Sonarqube'){
-      steps{
-        container('maven'){
-          sh 'mvn sonar:sonar --settings ./complete/settings.xml -f ./complete/pom.xml'
-        }}}
-    stage ('Send to CD'){
-      steps{
-        cloudBeesFlowRunPipeline addParam: '{"pipeline":{"pipelineName":"git-pipline","parameters":"[{\\"parameterName\\": \\"Branch\\", \\"parameterValue\\": \\"${JOB_NAME}\\" }]"}}', configuration: 'CD-Config', pipelineName: 'git-pipline', projectName: 'SKO-UseCases'
-      }}
+   
   }
 }
