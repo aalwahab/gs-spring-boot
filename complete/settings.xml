@@ -88,12 +88,12 @@ under the License.
 		<server>
 			<id>maven-releases</id>
 			<username>admin</username>
-			<password>User12002!</password>
+			<password></password>
 		</server>
 		<server>
 			<id>maven-snapshots</id>
 			<username>admin</username>
-			<password>User12002!</password>
+			<password></password>
 		</server>
 	</servers>
 </settings>
